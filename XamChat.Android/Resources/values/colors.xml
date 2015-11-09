@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#ff4dc1ce</color>
+  <color name="colorPrimaryDark">#ff39cb7d</color>
+  <color name="colorAccent">#ff4dc1cd</color>
+  <color name="statusBarColor">#ff4dc1ce</color>
+  <color name="windowBackground">#ffffff</color>
+
+
+
+  <color name="error">#ed4060</color>
+  <color name="green">#ff01ed81</color>
+  <color name="green_dark">#ff39cb7d</color>
+  <color name="blue">#4dc1cd</color>
+  <color name="light_blue">#a9f7ff</color>
+  <color name="light_gray">#cccccc</color>
+
+  <color name="upworky_edit_text_hint">#5f697a</color>
+
+  <item type="color" name="text_color">#FF9ceff7</item>
+  <item type="color" name="material_white">#ffefefef</item>
+  <item type="color" name="material_dark">#ff303030</item>
+  <item type="color" name="dark">#ff000000</item>
+  <item type="color" name="gray">#ff5f697a</item>
+</resources>

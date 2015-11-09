@@ -1,0 +1,9 @@
+﻿[ 
+    {"id": "368336da-9d27-41d5-926e-cb8040c1f3d6", "firstname": "Bob", "lastname": "Dylan", "phoneNumber": "+40748387147", "picture": "http://uploads.striking.ly/page/images/icons/tumblr-icon.png" },
+    {"id": "0505a637-9c6f-42fe-bcb5-25ffd832294d", "firstname": "John", "lastname": "Doe", "phoneNumber": "+40748387147" , "picture": "http://uploads.striking.ly/page/images/icons/linkedin-icon.png"  },
+    {"id": "3f9b345c-f4f3-4cb0-9920-5a1542a40748", "firstname": "Roger", "lastname": "Dupont", "phoneNumber": "+40748387147" , "picture": "http://uploads.striking.ly/page/images/icons/vimeo-icon.png" },
+    {"id": "25325f56-bca9-47f0-878a-c1a3b65b9f59", "firstname": "Robert", "lastname": "Dupond", "phoneNumber": "+40748387147", "picture": "http://uploads.strikinglycdn.com/page/images/icons/yelp-icon.png"  },
+    {"id": "71ea7864-521c-4f2d-a349-70304e5f9f9d", "firstname": "Jean-Jacques", "lastname": "Rousseau", "phoneNumber": "+40748387147", "picture": "http://uploads.striking.ly/page/images/icons/youtube-icon.png" },
+    {"id": "e6474959-db14-4367-990e-dfb7146c7d7a", "firstname": "Robert", "lastname": "Doisneau", "phoneNumber": "+40748387147", "picture": "http://uploads.strikinglycdn.com/page/images/icons/pinterest-icon.png" },
+    {"id": "4c1f9738-a76c-41cb-8606-a2eca7b2dbc7", "firstname": "Jacques-Yves", "lastname": "Cousteau", "phoneNumber": "+40748387147", "picture":  "http://assets.strikingly.com/assets/themes/fresh/twitter-icon.png"}
+]

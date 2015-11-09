@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="LoginViewController" sceneMemberID="viewController" storyboardIdentifier="LoginViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="204" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="34" y="123" width="249" height="322"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email" lineBreakMode="tailTruncation" minimumFontSize="10" id="5" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                        <rect key="frame" x="14" y="7" width="215" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="9" firstAttribute="height" constant="21"/>
+                                            <constraint id="16" firstAttribute="width" constant="119"/>
+                                        </constraints>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="32" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="-16" y="266" width="280" height="30"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <constraints>
+                                            <constraint id="35" firstAttribute="width" constant="280"/>
+                                        </constraints>
+                                        <connections/>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" minimumFontSize="10" id="214" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                        <rect key="frame" x="14" y="127" width="215" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="215" firstAttribute="height" constant="21"/>
+                                            <constraint id="216" firstAttribute="width" constant="119"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="218" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="14" y="180" width="215" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <constraints>
+                                            <constraint id="228" firstAttribute="width" constant="215"/>
+                                        </constraints>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="219" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="14" y="58" width="215" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="209" firstAttribute="width" constant="249"/>
+                                    <constraint id="210" firstAttribute="height" constant="322"/>
+                                    <constraint id="245" constant="14" firstItem="218" firstAttribute="leading" secondItem="204" secondAttribute="leading"/>
+                                    <constraint id="246" constant="112" firstItem="204" firstAttribute="bottom" secondItem="218" secondAttribute="bottom"/>
+                                    <constraint id="247" firstItem="214" firstAttribute="leading" secondItem="204" secondAttribute="leading" constant="14"/>
+                                    <constraint id="248" constant="127" firstItem="214" firstAttribute="top" secondItem="204" secondAttribute="top"/>
+                                    <constraint id="249" firstItem="5" firstAttribute="leading" secondItem="204" secondAttribute="leading" constant="14"/>
+                                    <constraint id="250" constant="7" firstItem="5" firstAttribute="top" secondItem="204" secondAttribute="top"/>
+                                    <constraint id="251" firstItem="32" firstAttribute="leading" secondItem="204" secondAttribute="leading" constant="-16"/>
+                                    <constraint id="252" constant="26" firstItem="204" firstAttribute="bottom" secondItem="32" secondAttribute="bottom"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="238" firstItem="204" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="34"/>
+                            <constraint id="239" constant="123" firstItem="kh9-bI-dsS" firstAttribute="bottom" secondItem="204" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField_Email" destination="219" id="name-outlet-219"/>
+                        <outlet property="textField_Password" destination="218" id="name-outlet-218"/>
+                        <outlet property="btn_Login" destination="32" id="name-outlet-32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <scene sceneID="25">
+            <objects>
+                <viewController id="22" sceneMemberID="viewController" customClass="FriendViewController" storyboardIdentifier="FriendViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="17"/>
+                        <viewControllerLayoutGuide type="bottom" id="18"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="27">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="412" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="160" width="288" height="248"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Full Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="366" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="20" width="140" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" colorSpace="calibratedRGB" red="0.95686274509803926" green="0.22352941176470589" blue="0.22352941176470589" alpha="1"/>
+                                        <constraints>
+                                            <constraint id="419" firstAttribute="width" constant="140"/>
+                                            <constraint id="420" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone" lineBreakMode="tailTruncation" minimumFontSize="10" id="437" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="194" y="20" width="74" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.12549019607843137" blue="0.12549019607843137" alpha="1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="352" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="207" y="198" width="81" height="30"/>
+                                        <state key="normal" title="Call">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" colorSpace="calibratedRGB" red="0.85882352941176465" green="0.094117647058823528" blue="0.12941176470588237" alpha="1"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="353" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="163" width="96" height="65"/>
+                                        <constraints>
+                                            <constraint id="415" firstAttribute="width" constant="96"/>
+                                            <constraint id="416" firstAttribute="height" constant="65"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="413" firstItem="412" firstAttribute="bottom" secondItem="353" secondAttribute="bottom" constant="20"/>
+                                    <constraint id="414" firstItem="353" firstAttribute="leading" secondItem="412" secondAttribute="leading" constant="0.0"/>
+                                    <constraint id="417" firstItem="366" firstAttribute="top" secondItem="412" secondAttribute="top" constant="20"/>
+                                    <constraint id="418" firstItem="366" firstAttribute="leading" secondItem="412" secondAttribute="leading" constant="0.0"/>
+                                    <constraint id="427" firstAttribute="width" constant="288"/>
+                                    <constraint id="428" firstAttribute="height" constant="248"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="429" firstItem="27" firstAttribute="bottom" secondItem="412" secondAttribute="bottom" constant="160"/>
+                            <constraint id="430" firstItem="27" firstAttribute="trailing" secondItem="412" secondAttribute="trailing" constant="16"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="26"/>
+                    <connections>
+                        <outlet property="lbl_fullName" destination="366" id="name-outlet-366"/>
+                        <outlet property="btn_call" destination="352" id="name-outlet-352"/>
+                        <outlet property="iv_profilePicture" destination="353" id="name-outlet-353"/>
+                        <outlet property="lbl_phone" destination="437" id="name-outlet-437"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="28" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="11"/>
+        </scene>
+        <scene sceneID="287">
+            <objects>
+                <tableViewController id="288" sceneMemberID="viewController" customClass="FriendsViewController" storyboardIdentifier="FriendsViewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="289">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="292" customClass="FriendCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="292" id="293">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="312" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="12" y="11" width="165" height="21"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <constraints>
+                                                <constraint id="315" firstAttribute="width" constant="165"/>
+                                                <constraint id="316" firstAttribute="height" constant="21"/>
+                                            </constraints>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="317" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="242" y="-2" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint id="339" firstAttribute="width" constant="48"/>
+                                                <constraint id="340" firstAttribute="height" constant="48"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="337" firstItem="317" firstAttribute="centerY" secondItem="293" secondAttribute="centerY" constant="0.0"/>
+                                        <constraint id="338" constant="30" firstItem="293" firstAttribute="trailing" secondItem="317" secondAttribute="trailing"/>
+                                        <constraint id="341" firstItem="312" firstAttribute="top" secondItem="293" secondAttribute="top" constant="11"/>
+                                        <constraint id="342" constant="12" firstItem="312" firstAttribute="leading" secondItem="293" secondAttribute="leading"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lbl_fullName" destination="312" id="name-outlet-312"/>
+                                    <outlet property="iv_Friend" destination="317" id="name-outlet-317"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="288" id="290"/>
+                            <outlet property="delegate" destination="288" id="291"/>
+                        </connections>
+                    </tableView>
+                    <connections/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="294" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="4"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="Default-568h.png" width="640" height="1136"/>
+    </resources>
+</document>
