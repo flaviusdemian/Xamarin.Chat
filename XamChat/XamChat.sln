@@ -17,6 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.UWP.Windows", "XamC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.UWP.WindowsPhone", "XamChat.UWP\XamChat.UWP.WindowsPhone\XamChat.UWP.WindowsPhone.csproj", "{7696F6A5-8023-489E-AE7F-B4E1AB0B5214}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A3076765-A943-4B7D-92F8-12D769F80633}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		XamChat.UWP\XamChat.UWP.Shared\XamChat.UWP.Shared.projitems*{089134e5-2b5d-4b81-8976-2ab495a2d224}*SharedItemsImports = 4

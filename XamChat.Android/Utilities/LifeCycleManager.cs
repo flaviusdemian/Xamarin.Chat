@@ -1,22 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using Java.Lang;
 using XamChat.Android.Application;
 
 namespace XamChat.Android.Utilities
 {
-    public class LifeCycleManager : Java.Lang.Object, global::Android.App.Application.IActivityLifecycleCallbacks
+    public class LifeCycleManager : Object, global::Android.App.Application.IActivityLifecycleCallbacks
     {
-        private int _started = 0;
-        private int _stopped = 0;
+        private int _started;
+        private int _stopped;
 
         #region IActivityLifecycleCallbacks implementation
 
@@ -34,7 +26,6 @@ namespace XamChat.Android.Utilities
 
         public void OnActivityResumed(Activity activity)
         {
-
         }
 
         public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
@@ -62,4 +53,3 @@ namespace XamChat.Android.Utilities
         #endregion
     }
 }
-

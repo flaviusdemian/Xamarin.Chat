@@ -1,29 +1,17 @@
 using System;
-using System.Threading.Tasks;
-using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views;
-using CoreGraphics;
 using Foundation;
-using ObjCRuntime;
 using UIKit;
-using XamChat.Core.Interfaces;
-using XamChat.Core.Services;
 using XamChat.Core.ViewModels;
-using XamChat.iOS.UI;
 
 namespace XamChat.iOS.Views
 {
     [MvxFromStoryboard(StoryboardName = "MainStoryboard_iPhone")]
     public partial class FriendsViewController : MvxTableViewController
     {
-        UISearchBar _searchBar;
-
-        static bool UserInterfaceIdiomIsPhone
-        {
-            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-        }
+        private UISearchBar _searchBar;
 
         public FriendsViewController()
         {
@@ -32,6 +20,11 @@ namespace XamChat.iOS.Views
         public FriendsViewController(IntPtr handle)
             : base(handle)
         {
+        }
+
+        private static bool UserInterfaceIdiomIsPhone
+        {
+            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
         }
 
         public override void ViewDidLoad()
@@ -48,12 +41,10 @@ namespace XamChat.iOS.Views
             _searchBar.AutocorrectionType = UITextAutocorrectionType.No;
             _searchBar.AutocapitalizationType = UITextAutocapitalizationType.None;
             _searchBar.CancelButtonClicked += SearchBarCancelButtonClicked;
-            _searchBar.SearchButtonClicked += (sender, e) =>
-            {
-                PerformSearch();
-            };
+            _searchBar.SearchButtonClicked += (sender, e) => { PerformSearch(); };
 
-            var set = this.CreateBindingSet<FriendsViewController, FriendsViewModel>();
+            MvxFluentBindingDescriptionSet<FriendsViewController, FriendsViewModel> set =
+                this.CreateBindingSet<FriendsViewController, FriendsViewModel>();
             set.Bind(source).To(x => x.Friends);
             set.Bind(source).For(s => s.SelectionChangedCommand).To(vm => vm.ViewDetailsCommand);
 
@@ -103,7 +94,6 @@ namespace XamChat.iOS.Views
             protected CustomTableViewSource(IntPtr handle)
                 : base(handle)
             {
-
             }
 
             public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
@@ -112,9 +102,9 @@ namespace XamChat.iOS.Views
             }
 
             protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath,
-                                                                  object item)
+                object item)
             {
-                return (FriendCell)tableView.DequeueReusableCell(FriendCellIdentifier);
+                return tableView.DequeueReusableCell(FriendCellIdentifier);
             }
         }
     }

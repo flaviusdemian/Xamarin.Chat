@@ -1,5 +1,4 @@
 using Android.OS;
-using Android.Support.V7.App;
 using Cirrious.MvvmCross.Droid.Views;
 using XamChat.Android.Application;
 

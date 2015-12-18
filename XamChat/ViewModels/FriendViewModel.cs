@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Input;
 using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.PhoneCall;
 using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Plugins.PhoneCall;
 using XamChat.Core.Interfaces;
 using XamChat.Core.Models;
 

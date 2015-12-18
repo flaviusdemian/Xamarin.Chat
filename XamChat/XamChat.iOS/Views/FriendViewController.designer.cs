@@ -4,6 +4,8 @@
 // actions declared in your storyboard file.
 // Manual changes to this file will not be maintained.
 //
+
+using Cirrious.MvvmCross.Binding.BindingContext;
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
@@ -12,7 +14,7 @@ using UIKit;
 namespace XamChat.iOS.Views
 {
 	[Register ("FriendViewController")]
-	partial class FriendViewController
+	partial class FriendViewController : IMvxBindingContextOwner
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]

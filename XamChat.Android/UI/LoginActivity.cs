@@ -1,11 +1,6 @@
 using Android.App;
 using Android.Content.PM;
-using Android.OS;
 using Android.Widget;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Droid.Views;
-using XamChat.Android.Services;
-using XamChat.Core.Interfaces;
 using XamChat.Core.ViewModels;
 
 namespace XamChat.Android.UI
@@ -17,14 +12,11 @@ namespace XamChat.Android.UI
     public class LoginActivity : BaseActivity
     {
         private Button _buttonLogin;
-        private EditText _editTextEmail, _editTextPassword; 
+        private EditText _editTextEmail, _editTextPassword;
 
         public new LoginViewModel ViewModel
         {
-            get
-            {
-                return (LoginViewModel)base.ViewModel;
-            }
+            get { return (LoginViewModel) base.ViewModel; }
             set { base.ViewModel = value; }
         }
 

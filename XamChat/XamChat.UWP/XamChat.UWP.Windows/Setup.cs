@@ -13,7 +13,7 @@ namespace XamChat.UWP
 
         protected override IMvxApplication CreateApp()
         {
-            return new XamChat.Core.App();
+            return new Core.App();
         }
 		
         protected override IMvxTrace CreateDebugTrace()

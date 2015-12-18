@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using UIKit;
+﻿using UIKit;
 using XamChat.Core.Interfaces;
 
 namespace XamChat.iOS.Services

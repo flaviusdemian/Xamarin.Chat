@@ -1,8 +1,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Widget;
-using Cirrious.MvvmCross.Droid.Views;
 using XamChat.Core.ViewModels;
 
 namespace XamChat.Android.UI
@@ -15,10 +13,7 @@ namespace XamChat.Android.UI
     {
         public new FriendsViewModel ViewModel
         {
-            get
-            {
-                return (FriendsViewModel)base.ViewModel;
-            }
+            get { return (FriendsViewModel) base.ViewModel; }
             set { base.ViewModel = value; }
         }
 

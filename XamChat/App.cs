@@ -1,8 +1,10 @@
+
 using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace XamChat.Core
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {
@@ -12,8 +14,6 @@ namespace XamChat.Core
                 .RegisterAsLazySingleton();
 
             RegisterAppStart<ViewModels.LoginViewModel>();
-            //RegisterAppStart<ViewModels.FriendsViewModel>();
-            //RegisterAppStart<ViewModels.FriendViewModel>();
 
         }
     }

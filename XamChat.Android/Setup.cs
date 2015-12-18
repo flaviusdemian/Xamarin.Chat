@@ -1,8 +1,5 @@
-using System.Collections.Generic;
-using System.Reflection;
 using Android.Content;
 using Cirrious.CrossCore.Platform;
-using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using XamChat.Core;
@@ -19,7 +16,7 @@ namespace XamChat.Android
         {
             return new App();
         }
-		
+
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();

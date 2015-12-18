@@ -1,21 +1,12 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Util;
-using Android.Views;
 using Android.Widget;
 
 namespace XamChat.Android.Utilities
 {
     public class DebugLog
     {
-        private static volatile DebugLog instance;
+        private static DebugLog instance;
 
         private bool isEnabled = true;
 
@@ -38,7 +29,7 @@ namespace XamChat.Android.Utilities
 
         public void MyLog(string tag, string message)
         {
-            if (isEnabled == true)
+            if (isEnabled)
             {
                 Log.Debug(tag, message);
             }
@@ -46,7 +37,7 @@ namespace XamChat.Android.Utilities
 
         public void MyLog(string message)
         {
-            if (isEnabled == true)
+            if (isEnabled)
             {
                 Log.Debug(AndroidConstants.TAG, message);
             }
@@ -54,7 +45,7 @@ namespace XamChat.Android.Utilities
 
         public void LogExceptionWithoutToast(String message)
         {
-            if (isEnabled == true)
+            if (isEnabled)
             {
                 Log.Debug(AndroidConstants.TAG, AndroidConstants.LINE_STRING);
                 Log.Debug(AndroidConstants.TAG, string.Format("Exception is: %s", message));
@@ -64,7 +55,7 @@ namespace XamChat.Android.Utilities
 
         public void LogException(String message)
         {
-            if (isEnabled == true)
+            if (isEnabled)
             {
                 Log.Debug(AndroidConstants.TAG, AndroidConstants.LINE_STRING);
                 Log.Debug(AndroidConstants.TAG, string.Format("Exception is: %s", message));
@@ -74,4 +65,3 @@ namespace XamChat.Android.Utilities
         }
     }
 }
-

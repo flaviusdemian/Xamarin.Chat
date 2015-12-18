@@ -2,9 +2,6 @@ using System;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views;
-using CoreGraphics;
-using Foundation;
-using ObjCRuntime;
 using UIKit;
 using XamChat.Core.ViewModels;
 
@@ -16,11 +13,6 @@ namespace XamChat.iOS.Views
         //weak reference problem
         private MvxImageViewLoader _imageViewLoader;
 
-        static bool UserInterfaceIdiomIsPhone
-        {
-            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-        }
-
         public FriendViewController()
         {
         }
@@ -30,6 +22,11 @@ namespace XamChat.iOS.Views
         {
         }
 
+        private static bool UserInterfaceIdiomIsPhone
+        {
+            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+        }
+
         public override void ViewDidLoad()
         {
             try
@@ -37,10 +34,11 @@ namespace XamChat.iOS.Views
                 base.ViewDidLoad();
 
                 Title = NavigationItem.Title = TabBarItem.Title = "Friend Details";
-                
-                _imageViewLoader = new MvxImageViewLoader(() => this.iv_profilePicture);
 
-                var set = this.CreateBindingSet<FriendViewController, FriendViewModel>();
+                _imageViewLoader = new MvxImageViewLoader(() => iv_profilePicture);
+
+                MvxFluentBindingDescriptionSet<FriendViewController, FriendViewModel> set =
+                    this.CreateBindingSet<FriendViewController, FriendViewModel>();
                 set.Bind(_imageViewLoader).To(vm => vm.Friend.Picture);
                 set.Bind(lbl_phone).To(vm => vm.Friend.PhoneNumber);
                 set.Bind(lbl_fullName).To(vm => vm.Friend.FullName);

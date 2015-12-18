@@ -1,4 +1,4 @@
-﻿using Cirrious.MvvmCross.Plugins.PhoneCall.Droid;
+﻿using MvvmCross.Plugins.PhoneCall.Droid;
 using XamChat.Core.Interfaces;
 
 namespace XamChat.Android.Services
@@ -7,8 +7,7 @@ namespace XamChat.Android.Services
     {
         public void Call(string number)
         {
-             new MvxPhoneCallTask().MakePhoneCall("",number);
-
+            new MvxPhoneCallTask().MakePhoneCall("", number);
         }
 
         public void Call(string name, string number)

@@ -1,14 +1,9 @@
 using System;
-using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using CoreGraphics;
-using Foundation;
 using ObjCRuntime;
 using UIKit;
-using XamChat.Core.Interfaces;
 using XamChat.Core.ViewModels;
-using XamChat.iOS.Services;
 
 namespace XamChat.iOS.Views
 {
@@ -16,11 +11,6 @@ namespace XamChat.iOS.Views
     [MvxFromStoryboard(StoryboardName = "MainStoryboard_iPhone")]
     public partial class LoginViewController : MvxViewController
     {
-        static bool UserInterfaceIdiomIsPhone
-        {
-            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-        }
-
         public LoginViewController()
         {
         }
@@ -28,6 +18,11 @@ namespace XamChat.iOS.Views
         public LoginViewController(IntPtr handle)
             : base(handle)
         {
+        }
+
+        private static bool UserInterfaceIdiomIsPhone
+        {
+            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
         }
 
         public override void ViewDidLoad()
@@ -40,7 +35,8 @@ namespace XamChat.iOS.Views
                 EdgesForExtendedLayout = UIRectEdge.None;
             }
 
-            var set = this.CreateBindingSet<LoginViewController, LoginViewModel>();
+            MvxFluentBindingDescriptionSet<LoginViewController, LoginViewModel> set =
+                this.CreateBindingSet<LoginViewController, LoginViewModel>();
             set.Bind(textField_Email).To(vm => vm.Email);
             set.Bind(textField_Password).To(vm => vm.Password);
             set.Bind(btn_Login).To(x => x.LoginCommand);
