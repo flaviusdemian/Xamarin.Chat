@@ -1,15 +1,14 @@
 using System;
 using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using MvvmCross.Plugins.PhoneCall;
 using XamChat.Core.Interfaces;
 using XamChat.Core.Models;
 
 namespace XamChat.Core.ViewModels
 {
-    public class FriendViewModel
-        : MvxViewModel
+    public class FriendViewModel: MvxViewModel
     {
         //Data
         private readonly IFriendService _friendService;

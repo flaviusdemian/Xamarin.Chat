@@ -26,27 +26,27 @@ namespace XamChat.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::XamChat.Android.Resource.Attribute.MvxBind;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::XamChat.Android.Resource.Attribute.MvxDropDownItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::XamChat.Android.Resource.Attribute.MvxGroupItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::XamChat.Android.Resource.Attribute.MvxItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::XamChat.Android.Resource.Attribute.MvxLang;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::XamChat.Android.Resource.Attribute.MvxSource;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::XamChat.Android.Resource.Attribute.MvxTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::XamChat.Android.Resource.Id.MvvmCrossTagId;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::XamChat.Android.Resource.Id.MvxBindingTagUnique;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::XamChat.Android.Resource.Styleable.MvxBinding;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::XamChat.Android.Resource.Styleable.MvxBinding_MvxBind;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::XamChat.Android.Resource.Styleable.MvxBinding_MvxLang;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::XamChat.Android.Resource.Styleable.MvxControl;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::XamChat.Android.Resource.Styleable.MvxControl_MvxTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::XamChat.Android.Resource.Styleable.MvxExpandableListView;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::XamChat.Android.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::XamChat.Android.Resource.Styleable.MvxImageView;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::XamChat.Android.Resource.Styleable.MvxImageView_MvxSource;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::XamChat.Android.Resource.Styleable.MvxListView;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::XamChat.Android.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::XamChat.Android.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::XamChat.Android.Resource.Attribute.MvxBind;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::XamChat.Android.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::XamChat.Android.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::XamChat.Android.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::XamChat.Android.Resource.Attribute.MvxLang;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::XamChat.Android.Resource.Attribute.MvxSource;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::XamChat.Android.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::XamChat.Android.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::XamChat.Android.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::XamChat.Android.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::XamChat.Android.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::XamChat.Android.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::XamChat.Android.Resource.Styleable.MvxControl;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::XamChat.Android.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::XamChat.Android.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::XamChat.Android.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::XamChat.Android.Resource.Styleable.MvxImageView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::XamChat.Android.Resource.Styleable.MvxImageView_MvxSource;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::XamChat.Android.Resource.Styleable.MvxListView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::XamChat.Android.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::XamChat.Android.Resource.Styleable.MvxListView_MvxItemTemplate;
 		}
 		
 		public partial class Animation
@@ -1725,11 +1725,8 @@ namespace XamChat.Android
 			// aapt resource value: 0x7f020073
 			public const int img_profile = 2130837619;
 			
-			// aapt resource value: 0x7f020075
-			public const int notification_template_icon_bg = 2130837621;
-			
 			// aapt resource value: 0x7f020074
-			public const int splash = 2130837620;
+			public const int notification_template_icon_bg = 2130837620;
 			
 			static Drawable()
 			{
@@ -2242,52 +2239,46 @@ namespace XamChat.Android
 			public const int activity_splash = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int FirstView = 2130903070;
+			public const int notification_media_action = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_media_action = 2130903071;
+			public const int notification_media_cancel_action = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_media_cancel_action = 2130903072;
+			public const int notification_template_big_media = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_big_media = 2130903073;
+			public const int notification_template_big_media_narrow = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_template_big_media_narrow = 2130903074;
+			public const int notification_template_lines = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_template_lines = 2130903075;
+			public const int notification_template_media = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_template_media = 2130903076;
+			public const int notification_template_part_chronometer = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_template_part_chronometer = 2130903077;
+			public const int notification_template_part_time = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_part_time = 2130903078;
+			public const int select_dialog_item_material = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int select_dialog_item_material = 2130903079;
+			public const int select_dialog_multichoice_material = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int select_dialog_multichoice_material = 2130903080;
+			public const int select_dialog_singlechoice_material = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int select_dialog_singlechoice_material = 2130903081;
+			public const int support_simple_spinner_dropdown_item = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int SplashScreen = 2130903082;
+			public const int toolbar_friends = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int support_simple_spinner_dropdown_item = 2130903083;
-			
-			// aapt resource value: 0x7f03002c
-			public const int toolbar_friends = 2130903084;
-			
-			// aapt resource value: 0x7f03002d
-			public const int toolbar_with_back_button = 2130903085;
+			public const int toolbar_with_back_button = 2130903083;
 			
 			static Layout()
 			{
@@ -2495,17 +2486,17 @@ namespace XamChat.Android
 			// aapt resource value: 0x7f0a0080
 			public const int Animation_AppCompat_DropDownUp = 2131361920;
 			
-			// aapt resource value: 0x7f0a0134
-			public const int AppTheme = 2131362100;
-			
-			// aapt resource value: 0x7f0a0136
-			public const int AppTheme_AppBarOverlay = 2131362102;
+			// aapt resource value: 0x7f0a0133
+			public const int AppTheme = 2131362099;
 			
 			// aapt resource value: 0x7f0a0135
-			public const int AppTheme_NoActionBar = 2131362101;
+			public const int AppTheme_AppBarOverlay = 2131362101;
 			
-			// aapt resource value: 0x7f0a0137
-			public const int AppTheme_PopupOverlay = 2131362103;
+			// aapt resource value: 0x7f0a0134
+			public const int AppTheme_NoActionBar = 2131362100;
+			
+			// aapt resource value: 0x7f0a0136
+			public const int AppTheme_PopupOverlay = 2131362102;
 			
 			// aapt resource value: 0x7f0a0081
 			public const int Base_AlertDialog_AppCompat = 2131361921;
@@ -3196,9 +3187,6 @@ namespace XamChat.Android
 			
 			// aapt resource value: 0x7f0a00e9
 			public const int Theme_AppCompat_NoActionBar = 2131362025;
-			
-			// aapt resource value: 0x7f0a0133
-			public const int Theme_Splash = 2131362099;
 			
 			// aapt resource value: 0x7f0a00ea
 			public const int ThemeOverlay_AppCompat = 2131362026;

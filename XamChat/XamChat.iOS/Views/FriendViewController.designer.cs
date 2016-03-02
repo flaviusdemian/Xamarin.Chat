@@ -5,10 +5,10 @@
 // Manual changes to this file will not be maintained.
 //
 
-using Cirrious.MvvmCross.Binding.BindingContext;
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using MvvmCross.Binding.BindingContext;
 using UIKit;
 
 namespace XamChat.iOS.Views

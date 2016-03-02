@@ -1,5 +1,5 @@
 using Android.OS;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Droid.Views;
 using XamChat.Android.Application;
 
 namespace XamChat.Android.UI

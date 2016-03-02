@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using CoreGraphics;
 using Foundation;
+using MvvmCross.Binding.iOS.Views;
 using UIKit;
 
 namespace XamChat.iOS.UI

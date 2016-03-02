@@ -1,6 +1,6 @@
 using System;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
 using ObjCRuntime;
 using UIKit;
 using XamChat.Core.ViewModels;

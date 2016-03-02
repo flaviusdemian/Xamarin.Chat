@@ -1,11 +1,10 @@
 using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 using XamChat.Core.Interfaces;
 
 namespace XamChat.Core.ViewModels
 {
-    public class LoginViewModel
-        : MvxViewModel
+    public class LoginViewModel : MvxViewModel
     {
         private string _email, _password;
         private ICommand _loginCommand;
