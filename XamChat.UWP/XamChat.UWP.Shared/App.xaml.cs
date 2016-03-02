@@ -99,7 +99,7 @@ namespace XamChat.UWP
                 var setup = new Setup(rootFrame);
                 setup.Initialize();
 
-                var start = Cirrious.CrossCore.Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>();
+                var start = Cirrious.CrossCore.Mvx.Resolve<MvvmCross.ViewModels.IMvxAppStart>();
                 start.Start();
             }
 
