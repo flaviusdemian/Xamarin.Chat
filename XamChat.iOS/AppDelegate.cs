@@ -16,7 +16,7 @@ namespace XamChat.iOS
     {
         private UIWindow _window;
 
-        public static string MainStoryboard { get; private set; }
+        //public static string MainStoryboard { get; private set; }
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
@@ -30,11 +30,11 @@ namespace XamChat.iOS
 
             _window.MakeKeyAndVisible();
 
-            MainStoryboard = "MainStoryboard_iPhone";
-            if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-            {
-                MainStoryboard = "MainStoryboard_iPad";
-            }
+            //MainStoryboard = "MainStoryboard_iPhone";
+            //if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            //{
+            //    MainStoryboard = "MainStoryboard_iPad";
+            //}
 
 
             SetupDependencyInjection();
