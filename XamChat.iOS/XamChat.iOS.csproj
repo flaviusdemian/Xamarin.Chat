@@ -94,6 +94,7 @@
     <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="NoPreLoadPluginBootstrapAction.cs" />
     <Compile Include="Services\CallService.cs" />
     <Compile Include="Services\NativeValidationService.cs" />
     <Compile Include="Setup.cs" />
@@ -102,7 +103,6 @@
       <DependentUpon>FriendCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\DebugTrace.cs" />
-    <Compile Include="Utilities\StoryboardHelper.cs" />
     <Compile Include="Views\FriendsViewController.designer.cs">
       <DependentUpon>FriendsViewController.cs</DependentUpon>
     </Compile>
