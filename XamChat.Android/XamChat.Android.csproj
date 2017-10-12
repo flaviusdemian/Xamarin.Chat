@@ -155,7 +155,6 @@
     <Compile Include="UI\SplashScreen.cs" />
     <Compile Include="Utilities\DebugLog.cs" />
     <Compile Include="Utilities\LifeCycleManager.cs" />
-    <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Utilities\ToastHelper.cs" />
     <Compile Include="UI\LoginActivity.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />

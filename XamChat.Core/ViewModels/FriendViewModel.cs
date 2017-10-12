@@ -42,15 +42,6 @@ namespace XamChat.Core.ViewModels
             Friend = mFriendService.Get(friendId);
         }
 
-        //public override void Start()
-        //{
-        //    base.Start();
-        //    if (mFriendService != null)
-        //    {
-        //        Friend = mFriendService.Get(friendId);
-        //    }
-        //}
-
         #region Commands Implementation
 
         public ICommand GoBackCommand

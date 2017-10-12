@@ -9,18 +9,18 @@ namespace XamChat.Core.Models
         public Guid Id { get; set; }
 
         [JsonProperty("firstname")]
-        public String FirstName { get; set; }
+        public string FirstName { get; set; }
 
         [JsonProperty("lastname")]
-        public String LastName { get; set; }
+        public string LastName { get; set; }
 
         [JsonProperty("phoneNumber")]
-        public String PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [JsonProperty("picture")]
-        public String Picture { get; set; }
+        public string Picture { get; set; }
 
-        public String FullName
+        public string FullName
         {
             get { return String.Format("{0} {1}", FirstName, LastName); }
         }

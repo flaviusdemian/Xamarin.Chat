@@ -26,7 +26,8 @@ namespace XamChat.Core.Services
                 return mFriends;
             }
 
-            using (var stream = typeof(FriendService).GetTypeInfo().Assembly.GetManifestResourceStream("XamChat.Core.Resources.data.json"))
+            using (var stream = typeof(FriendService).GetTypeInfo().Assembly.
+                   GetManifestResourceStream("XamChat.Core.Resources.data.json"))
             using (var reader = new StreamReader(stream))
             {
                 var content = reader.ReadToEnd();
@@ -38,9 +39,9 @@ namespace XamChat.Core.Services
         public Friend Get(Guid friendId)
         {
             var friends = GetFriends(true);
-            if (friends != null)
+            if (friends != null && friends.Any())
             {
-                return friends.FirstOrDefault(x => x.Id == friendId);
+                return friends.FirstOrDefault(friend => friend.Id == friendId);
             }
             throw  new Exception("Friends not existent!");
         }

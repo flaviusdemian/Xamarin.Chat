@@ -1,9 +1,6 @@
-
-
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
-using XamChat.Core.ViewModels;
 
 namespace XamChat.Core
 {

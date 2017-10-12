@@ -6,49 +6,60 @@ namespace XamChat.Core.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {
-        private string _email, _password;
-        private ICommand _loginCommand;
-        private ICoreValidationService _coreValidationService;
-        private INativeValidationService _nativeValidationService;
+        #region private fields
+
+        private string mEmail;
+        private string mPassword;
+        private ICommand mLoginCommand;
+        private ICoreValidationService mCoreValidationService;
+        private INativeValidationService mNativeValidationService;
+
+		#endregion
+
+		public LoginViewModel(ICoreValidationService coreValidationService, 
+                              INativeValidationService nativeValidationService)
+		{
+			mCoreValidationService = coreValidationService;
+			mNativeValidationService = nativeValidationService;
+		}
 
         public string Email
         {
-            get { return _email; }
-            set { _email = value; RaisePropertyChanged(() => Email); }
+            get { return mEmail; }
+            set { mEmail = value; RaisePropertyChanged(() => Email); }
         }
 
         public string Password
         {
-            get { return _password; }
-            set { _password = value; RaisePropertyChanged(() => Password); }
+            get { return mPassword; }
+            set { mPassword = value; RaisePropertyChanged(() => Password); }
         }
 
+		#region Commands Implementation
 
-        public LoginViewModel(ICoreValidationService coreValidationService, INativeValidationService nativeValidationService)
-        {
-            this._coreValidationService = coreValidationService;
-            this._nativeValidationService = nativeValidationService;
-        }
-
-        public ICommand LoginCommand
+		public ICommand LoginCommand
         {
             get
             {
-                _loginCommand = _loginCommand ?? new MvxCommand(DecideIfActive);
-                return _loginCommand;
+                mLoginCommand = mLoginCommand ?? new MvxCommand(DecideIfActive);
+                return mLoginCommand;
             }
         }
 
+        #endregion
+
+        #region private methods
+
         private void DecideIfActive()
         {
-            if (_coreValidationService.IsValidLogin(_email, _password))
+            if (mCoreValidationService.IsValidLogin(mEmail, mPassword))
             {
                 ShowViewModel<FriendsViewModel>();
+                return;
             }
-            else
-            {
-                _nativeValidationService.ShowNativeMessage("Invalid input at login.");
-            }
-        }
+            mNativeValidationService.ShowNativeMessage("Invalid input at login.");
+       }
+
+        #endregion
     }
 }

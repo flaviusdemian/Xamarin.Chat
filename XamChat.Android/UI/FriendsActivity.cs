@@ -5,10 +5,7 @@ using XamChat.Core.ViewModels;
 
 namespace XamChat.Android.UI
 {
-    [Activity(
-        Label = "Friends Activity"
-        , ScreenOrientation = ScreenOrientation.Portrait)
-    ]
+    [Activity(Label = "Friends Activity", ScreenOrientation = ScreenOrientation.Portrait)]
     public class FriendsActivity : BaseActivity
     {
         public new FriendsViewModel ViewModel
@@ -20,14 +17,6 @@ namespace XamChat.Android.UI
         protected override void OnViewModelSet()
         {
             SetContentView(Resource.Layout.activity_friends);
-        }
-
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            //var toolbar = FindViewById<Toolbar>(Resource.Id.friends_toolbar_container);
-            //SetActionBar(toolbar);
-            //ActionBar.Title = "Friends";
         }
     }
 }

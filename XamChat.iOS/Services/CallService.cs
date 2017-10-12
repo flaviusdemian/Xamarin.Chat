@@ -7,7 +7,7 @@ namespace XamChat.iOS.Services
     {
         public void Call(string number)
         {
-            new MvxPhoneCallTask().MakePhoneCall("", number);
+            new MvxPhoneCallTask().MakePhoneCall(string.Empty, number);
         }
 
         public void Call(string name, string number)

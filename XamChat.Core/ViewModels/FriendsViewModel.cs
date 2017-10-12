@@ -13,21 +13,21 @@ namespace XamChat.Core.ViewModels
     {
         #region private fields
 
-        private readonly IFriendService _friendService;
+        private readonly IFriendService mFriendService;
 
         private ObservableCollection<Friend> mFriends;
         private ObservableCollection<Friend> mFriendsCopy;
         private string mSearchTerm;
 
         //Commands
-        private ICommand _filterCommand;
-        private ICommand _viewDetailsCommand;
+        private ICommand mFilterCommand;
+        private ICommand mViewDetailsCommand;
 
         #endregion
 
         public FriendsViewModel(IFriendService friendService)
         {
-            _friendService = friendService;
+            mFriendService = friendService;
         }
 
         public string SearchTerm
@@ -46,13 +46,14 @@ namespace XamChat.Core.ViewModels
             set { SetProperty(ref mFriends, value); }
         }
 
-        //Commands Implementation
-        public ICommand ViewDetailsCommand
+		#region Commands Implementation
+
+		public ICommand ViewDetailsCommand
         {
             get
             {
-                _viewDetailsCommand = _viewDetailsCommand ?? new MvxCommand<Friend>(ViewDetails);
-                return _viewDetailsCommand;
+                mViewDetailsCommand = mViewDetailsCommand ?? new MvxCommand<Friend>(ViewDetails);
+                return mViewDetailsCommand;
             }
         }
 
@@ -60,16 +61,19 @@ namespace XamChat.Core.ViewModels
         {
             get
             {
-                _filterCommand = _filterCommand ?? new MvxCommand(FilterResults);
-                return _filterCommand;
+                mFilterCommand = mFilterCommand ?? new MvxCommand(FilterResults);
+                return mFilterCommand;
             }
         }
 
-        //public override async void Start()
+        #endregion
+
+        //public override async void Start() TODO: you can hook up your async call here!!!
         public override void Start()
         {
             base.Start();
-            Friends = new ObservableCollection<Friend>(_friendService.GetFriends(true));
+
+            Friends = new ObservableCollection<Friend>(mFriendService.GetFriends(true));
             mFriendsCopy = mFriends;
         }
 
