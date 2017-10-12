@@ -14,21 +14,22 @@ namespace XamChat.iOS
     [Register("AppDelegate")]
     public class AppDelegate : MvxApplicationDelegate
     {
-        private UIWindow _window;
+        private UIWindow Window;
 
         //public static string MainStoryboard { get; private set; }
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            _window = new UIWindow(UIScreen.MainScreen.Bounds);
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+			//Instance.Window = Window;
 
-            var setup = new Setup(this, _window);
-            setup.Initialize();
+			var setup = new Setup(this, Window);
+			setup.Initialize();
 
             var startup = Mvx.Resolve<IMvxAppStart>();
             startup.Start();
 
-            _window.MakeKeyAndVisible();
+            Window.MakeKeyAndVisible();
 
             //MainStoryboard = "MainStoryboard_iPhone";
             //if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)

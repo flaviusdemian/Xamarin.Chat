@@ -29,16 +29,18 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>9.3</string>
+	<string>10.3</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Default-568h@2x.png</string>
 	</array>
-	<key>UIMainStoryboardFile</key>
-	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStoryboard_iPad</string>
 	<key>UILaunchStoryboardName</key>
 	<string>MainStoryboard_iPhone.storyboard</string>
+	<key>CFBundleName</key>
+	<string>XamChat</string>
+	<key>UIMainStoryboardFile</key>
+	<string>MainStoryboard_iPhone</string>
 </dict>
 </plist>

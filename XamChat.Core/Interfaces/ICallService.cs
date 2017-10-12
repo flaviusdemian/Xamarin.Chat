@@ -8,7 +8,8 @@ namespace XamChat.Core.Interfaces
 {
     public interface ICallService
     {
-        void Call(String number);
-        void Call(String name, String number);
+        void Call(string number);
+
+        void Call(string name, string number);
     }
 }

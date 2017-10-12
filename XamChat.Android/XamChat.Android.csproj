@@ -191,8 +191,8 @@
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamChat\XamChat.Core.csproj">
-      <Project>{bb1126d9-2124-42e4-bef9-88280cf2f37c}</Project>
+    <ProjectReference Include="..\XamChat.Core\XamChat.Core.csproj">
+      <Project>{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}</Project>
       <Name>XamChat.Core</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,6 +10,7 @@ namespace XamChat.Core.Interfaces
     public interface IFriendService
     {
         Task<IEnumerable<Friend>> GetFriends(bool useCache);
+
         Task<Friend> Get(Guid friendId);
     }
 }

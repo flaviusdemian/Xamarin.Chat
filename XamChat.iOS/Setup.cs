@@ -31,10 +31,10 @@ namespace XamChat.iOS
             return new DebugTrace();
         }
 
-        protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
-        {
-            registry.Register<MvvmCross.Plugins.File.PluginLoader, MvvmCross.Plugins.File.iOS.Plugin>();
-            base.AddPluginsLoaders(registry);
-        }
+        //protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
+        //{
+        //    registry.Register<MvvmCross.Plugins.File.PluginLoader, MvvmCross.Plugins.File.iOS.Plugin>();
+        //    base.AddPluginsLoaders(registry);
+        //}
     }
 }

@@ -21,11 +21,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Flaviu Demian (YAEJE3596Y)</CodesignKey>
-    <CodesignProvision>b59c53c9-ef63-482b-a921-7883e5062f2b</CodesignProvision>
+    <CodesignProvision>iOS Team Provisioning Profile: *</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -92,7 +92,6 @@
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="NoPreLoadPluginBootstrapAction.cs" />
     <Compile Include="Services\CallService.cs" />
     <Compile Include="Services\NativeValidationService.cs" />
     <Compile Include="Setup.cs" />
@@ -125,6 +124,7 @@
     </InterfaceDefinition>
     <None Include="packages.config" />
     <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
+    <Compile Include="NoPreLoadPluginBootstrapAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -181,8 +181,8 @@
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamChat\XamChat.Core.csproj">
-      <Project>{BB1126D9-2124-42E4-BEF9-88280CF2F37C}</Project>
+    <ProjectReference Include="..\XamChat.Core\XamChat.Core.csproj">
+      <Project>{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}</Project>
       <Name>XamChat.Core</Name>
     </ProjectReference>
   </ItemGroup>
