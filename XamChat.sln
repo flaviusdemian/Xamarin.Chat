@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.Android", "XamChat.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.iOS", "XamChat.iOS\XamChat.iOS.csproj", "{643C9892-CE90-4D59-99B9-2F7BE968B70A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.CoreOld", "XamChat\XamChat.CoreOld.csproj", "{BB1126D9-2124-42E4-BEF9-88280CF2F37C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.Core", "XamChat.Core\XamChat.Core.csproj", "{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}"
 EndProject
 Global
@@ -127,42 +125,6 @@ Global
 		{643C9892-CE90-4D59-99B9-2F7BE968B70A}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{643C9892-CE90-4D59-99B9-2F7BE968B70A}.Release|x64.ActiveCfg = Release|iPhone
 		{643C9892-CE90-4D59-99B9-2F7BE968B70A}.Release|x86.ActiveCfg = Release|iPhone
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|x64.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|ARM.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|x64.ActiveCfg = Release|Any CPU
-		{BB1126D9-2124-42E4-BEF9-88280CF2F37C}.Release|x86.ActiveCfg = Release|Any CPU
 		{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU

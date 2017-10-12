@@ -37,7 +37,7 @@
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStoryboard_iPad</string>
 	<key>UILaunchStoryboardName</key>
-	<string>MainStoryboard_iPhone.storyboard</string>
+	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>XamChat</string>
 	<key>UIMainStoryboardFile</key>

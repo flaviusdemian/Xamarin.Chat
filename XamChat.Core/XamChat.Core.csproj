@@ -40,6 +40,7 @@
     <Compile Include="ViewModels\FriendsViewModel.cs" />
     <Compile Include="ViewModels\FriendViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="AppStart.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\data.json" />
@@ -62,6 +63,12 @@
     </Reference>
     <Reference Include="MvvmCross.Plugins.PhoneCall">
       <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.5.2.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.PhoneCall.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.3.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>..\packages\System.ComponentModel.TypeConverter.4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

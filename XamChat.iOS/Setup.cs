@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Platform.Plugins;
 using UIKit;
@@ -12,10 +13,13 @@ namespace XamChat.iOS
 {
     public class Setup : MvxIosSetup
     {
-        public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
-            : base(applicationDelegate, window)
-        {
-        }
+		public Setup(MvxApplicationDelegate appDelegate, IMvxIosViewPresenter presenter) : base(appDelegate, presenter)
+		{
+		}
+
+		public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window) : base(applicationDelegate, window)
+		{
+		}
 
         /// <summary>Creates the application.</summary>
         /// <returns>The IMvxApplication <see langword="object"/></returns>

@@ -1,6 +1,7 @@
 
 
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using XamChat.Core.ViewModels;
 
@@ -15,9 +16,9 @@ namespace XamChat.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterNavigationServiceAppStart<LoginViewModel>();
-            //RegisterAppStart<ViewModels.LoginViewModel>();
+            Mvx.ConstructAndRegisterSingleton<IMvxAppStart, AppStart>();
 
+            RegisterAppStart(Mvx.Resolve<IMvxAppStart>());
         }
     }
 }
