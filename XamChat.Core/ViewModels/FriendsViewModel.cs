@@ -9,82 +9,91 @@ using XamChat.Core.Models;
 
 namespace XamChat.Core.ViewModels
 {
-	public class FriendsViewModel : MvxViewModel
-	{
-		//Data
-		private readonly IFriendService _friendService;
-		private ICommand _filterCommand;
-		private ObservableCollection<Friend> _friends;
-		private ObservableCollection<Friend> _friendsCopy;
-		private String _searchTerm;
+    public class FriendsViewModel : MvxViewModel
+    {
+        #region private fields
 
-		//Commands
-		private ICommand _viewDetailsCommand;
+        private readonly IFriendService _friendService;
 
-		public FriendsViewModel(IFriendService friendService)
-		{
-			_friendService = friendService;
-		}
+        private ObservableCollection<Friend> mFriends;
+        private ObservableCollection<Friend> mFriendsCopy;
+        private string mSearchTerm;
 
-		public string SearchTerm
-		{
-			get { return _searchTerm; }
-			set
-			{
-				_searchTerm = value;
-				RaisePropertyChanged(() => SearchTerm);
-			}
-		}
+        //Commands
+        private ICommand _filterCommand;
+        private ICommand _viewDetailsCommand;
 
-		public ObservableCollection<Friend> Friends
-		{
-			get { return _friends; }
-			set { SetProperty(ref _friends, value); }
-		}
+        #endregion
 
-		//Commands Implementation
-		public ICommand ViewDetailsCommand
-		{
-			get
-			{
-				_viewDetailsCommand = _viewDetailsCommand ?? new MvxCommand<Friend>(ViewDetails);
-				return _viewDetailsCommand;
-			}
-		}
+        public FriendsViewModel(IFriendService friendService)
+        {
+            _friendService = friendService;
+        }
 
-		public ICommand FilterCommand
-		{
-			get
-			{
-				_filterCommand = _filterCommand ?? new MvxCommand(FilterResults);
-				return _filterCommand;
-			}
-		}
+        public string SearchTerm
+        {
+            get { return mSearchTerm; }
+            set
+            {
+                mSearchTerm = value;
+                RaisePropertyChanged(() => SearchTerm);
+            }
+        }
 
-		public override async void Start()
-		{
-			base.Start();
-			Friends = new ObservableCollection<Friend>(await _friendService.GetFriends(true));
-			_friendsCopy = _friends;
-		}
+        public ObservableCollection<Friend> Friends
+        {
+            get { return mFriends; }
+            set { SetProperty(ref mFriends, value); }
+        }
 
-		private void FilterResults()
-		{
-			if (!String.IsNullOrWhiteSpace(_searchTerm))
-			{
-				List<Friend> filteredFriends = Friends.Where(fr => fr.FullName.ToLower().Contains(_searchTerm.ToLower())).ToList();
-				Friends = new ObservableCollection<Friend>(filteredFriends);
-			}
-			else
-			{
-				Friends = _friendsCopy;
-			}
-		}
+        //Commands Implementation
+        public ICommand ViewDetailsCommand
+        {
+            get
+            {
+                _viewDetailsCommand = _viewDetailsCommand ?? new MvxCommand<Friend>(ViewDetails);
+                return _viewDetailsCommand;
+            }
+        }
 
-		//Private methods
-		private void ViewDetails(Friend friend)
-		{
-			ShowViewModel<FriendViewModel>(new { friendId = friend.Id });
-		}
-	}
+        public ICommand FilterCommand
+        {
+            get
+            {
+                _filterCommand = _filterCommand ?? new MvxCommand(FilterResults);
+                return _filterCommand;
+            }
+        }
+
+        //public override async void Start()
+        public override void Start()
+        {
+            base.Start();
+            Friends = new ObservableCollection<Friend>(_friendService.GetFriends(true));
+            mFriendsCopy = mFriends;
+        }
+
+        #region private methods
+
+        private void FilterResults()
+        {
+            if (!string.IsNullOrWhiteSpace(mSearchTerm))
+            {
+                var filteredFriends = Friends.Where(fr => fr.FullName.ToLower().Contains(mSearchTerm.ToLower())).ToList();
+                Friends = new ObservableCollection<Friend>(filteredFriends);
+            }
+            else
+            {
+                Friends = mFriendsCopy;
+            }
+        }
+
+        //Private methods
+        private void ViewDetails(Friend friend)
+        {
+            ShowViewModel<FriendViewModel>(new { friendId = friend.Id });
+        }
+
+        #endregion
+    }
 }

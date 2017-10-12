@@ -8,65 +8,72 @@ using XamChat.Core.Models;
 
 namespace XamChat.Core.ViewModels
 {
-    public class FriendViewModel: MvxViewModel
+    public class FriendViewModel : MvxViewModel
     {
-        //Data
-        private readonly IFriendService _friendService;
-        private ICommand _callCommand;
-        private Friend _friend;
+        #region private fields
 
-        //Commands
-        private ICommand _goBakToFriendCommand;
-        private Guid friendId;
+        private readonly IFriendService mFriendService;
+        private Friend mFriend;
+        private Guid mFriendId;
+
+        private ICommand mCallCommand;
+        private ICommand mGoBakToFriendCommand;
+
+        #endregion
 
         public FriendViewModel(IFriendService friendService)
         {
-            _friendService = friendService;
+            mFriendService = friendService;
         }
 
         public Friend Friend
         {
-            get { return _friend; }
+            get { return mFriend; }
             set
             {
-                _friend = value;
+                mFriend = value;
                 RaisePropertyChanged(() => Friend);
-            }
-        }
-
-
-        //Commands Implementation
-        public ICommand GoBackCommand
-        {
-            get
-            {
-                _goBakToFriendCommand = _goBakToFriendCommand ?? new MvxCommand(GoBackToFriends);
-                return _goBakToFriendCommand;
-            }
-        }
-
-        public ICommand CallCommand
-        {
-            get
-            {
-                _callCommand = _callCommand ?? new MvxCommand(CallFriend);
-                return _callCommand;
             }
         }
 
         public void Init(Guid friendId)
         {
-            this.friendId = friendId;
+            mFriendId = friendId;
+            Friend = mFriendService.Get(friendId);
         }
 
-        public override async void Start()
-        {
-            base.Start();
-            if (_friendService != null)
-            {
-                Friend = await _friendService.Get(friendId);
-            }
-        }
+        //public override void Start()
+        //{
+        //    base.Start();
+        //    if (mFriendService != null)
+        //    {
+        //        Friend = mFriendService.Get(friendId);
+        //    }
+        //}
+
+        #region Commands Implementation
+
+        public ICommand GoBackCommand
+		{
+			get
+			{
+				mGoBakToFriendCommand = mGoBakToFriendCommand ?? new MvxCommand(GoBackToFriends);
+				return mGoBakToFriendCommand;
+			}
+		}
+
+		public ICommand CallCommand
+		{
+			get
+			{
+				mCallCommand = mCallCommand ?? new MvxCommand(CallFriend);
+				return mCallCommand;
+			}
+		}
+
+        #endregion
+
+        #region private methods
 
         private void GoBackToFriends()
         {
@@ -78,5 +85,7 @@ namespace XamChat.Core.ViewModels
             PluginLoader.Instance.EnsureLoaded();
             Mvx.Resolve<IMvxPhoneCallTask>().MakePhoneCall(Friend.FullName, Friend.PhoneNumber);
         }
+
+        #endregion
     }
 }

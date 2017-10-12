@@ -13,41 +13,36 @@ namespace XamChat.Core.Services
 {
     public class FriendService : IFriendService
     {
-        private IEnumerable<Friend> _friends = null;
+        #region private fields
 
-        public async Task<IEnumerable<Friend>> GetFriends(bool useCache = false)
+        private IEnumerable<Friend> mFriends;
+
+        #endregion
+
+        public IEnumerable<Friend> GetFriends(bool useCache = false)
         {
-            await Task.Delay(TimeSpan.FromMilliseconds(1));
-            if (useCache && _friends != null)
+            if (useCache && mFriends != null)
             {
-                return _friends;
+                return mFriends;
             }
 
-            var serializer = new JsonSerializer();
             using (var stream = typeof(FriendService).GetTypeInfo().Assembly.GetManifestResourceStream("XamChat.Core.Resources.data.json"))
+            using (var reader = new StreamReader(stream))
             {
-                using (var reader = new StreamReader(stream))
-                {
-                    using (var jsonTextReader = new JsonTextReader(reader))
-                    {
-                        IEnumerable<Friend> friends = serializer.Deserialize<IEnumerable<Friend>>(jsonTextReader);
-                        return friends;
-                    }
-                }
+                var content = reader.ReadToEnd();
+                mFriends = JsonConvert.DeserializeObject<IEnumerable<Friend>>(content);
+                return mFriends;
             }
         }
 
-        public async Task<Friend> Get(Guid friendId)
+        public Friend Get(Guid friendId)
         {
-            IEnumerable<Friend> friends = await GetFriends(true);
+            var friends = GetFriends(true);
             if (friends != null)
             {
                 return friends.FirstOrDefault(x => x.Id == friendId);
             }
-            else
-            {
-                throw  new Exception("Friends not existent!");
-            }
+            throw  new Exception("Friends not existent!");
         }
     }
 }
