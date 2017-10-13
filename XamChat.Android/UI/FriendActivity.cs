@@ -19,7 +19,7 @@ namespace XamChat.Android.UI
             SetContentView(Resource.Layout.activity_friend);
 
             var toolbarTitle = FindViewById<TextView>(Resource.Id.toolbar_title);
-            toolbarTitle.Text = ViewModel.Friend.FullName;
+            toolbarTitle.Text = "Friend details";
         }
     }
 }
