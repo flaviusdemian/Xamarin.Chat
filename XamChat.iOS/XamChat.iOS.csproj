@@ -129,6 +129,11 @@
     <Compile Include="NoPreLoadPluginBootstrapAction.cs" />
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <Compile Include="Services\UIService.cs" />
+    <InterfaceDefinition Include="UI\FriendsTableCell2.xib" />
+    <Compile Include="UI\FriendsTableCell2.cs" />
+    <Compile Include="UI\FriendsTableCell2.designer.cs">
+      <DependentUpon>FriendsTableCell2.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
