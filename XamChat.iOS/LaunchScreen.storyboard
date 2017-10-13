@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,25 +19,22 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="209">
-                                <rect key="frame" x="32" y="220" width="311" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kl8-V5-uDo" image="splash_logo.png">
+                                <rect key="frame" x="40" y="236" width="520" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="t4S-0r-Gxe"/>
+                                    <constraint firstAttribute="height" constant="128" id="ikV-HI-ddq"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="209" secondAttribute="trailing" constant="16" id="Olm-em-Zyi"/>
-                            <constraint firstItem="209" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="200" id="aaP-St-j31"/>
-                            <constraint firstItem="209" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="16" id="t9b-My-p9A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kl8-V5-uDo" secondAttribute="trailing" constant="20" id="3H4-An-fQr"/>
+                            <constraint firstItem="kl8-V5-uDo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bjz-3E-hik"/>
+                            <constraint firstItem="kl8-V5-uDo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Lj9-Nt-mFc"/>
+                            <constraint firstItem="kl8-V5-uDo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="k30-nT-snk"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,4 +43,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_logo.png" width="1024" height="1024"/>
+    </resources>
 </document>
