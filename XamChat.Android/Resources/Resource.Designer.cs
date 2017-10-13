@@ -1963,8 +1963,8 @@ namespace XamChat.Android
 			// aapt resource value: 0x7f0a0075
 			public const int info = 2131361909;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int iv_full_profile_picture = 2131361882;
+			// aapt resource value: 0x7f0a005b
+			public const int iv_full_profile_picture = 2131361883;
 			
 			// aapt resource value: 0x7f0a0062
 			public const int iv_logo = 2131361890;
@@ -2149,6 +2149,9 @@ namespace XamChat.Android
 			// aapt resource value: 0x7f0a003c
 			public const int title_template = 2131361852;
 			
+			// aapt resource value: 0x7f0a0081
+			public const int toolbar_title = 2131361921;
+			
 			// aapt resource value: 0x7f0a0025
 			public const int top = 2131361829;
 			
@@ -2161,8 +2164,8 @@ namespace XamChat.Android
 			// aapt resource value: 0x7f0a0059
 			public const int tv_full_name = 2131361881;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int tv_full_phone_number = 2131361883;
+			// aapt resource value: 0x7f0a005a
+			public const int tv_full_phone_number = 2131361882;
 			
 			// aapt resource value: 0x7f0a0065
 			public const int tv_password = 2131361893;

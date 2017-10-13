@@ -17,6 +17,9 @@ namespace XamChat.Android.UI
         protected override void OnViewModelSet()
         {
             SetContentView(Resource.Layout.activity_login);
+
+            ViewModel.Email = "slown1";
+            ViewModel.Password = "slowarad1@";
         }
     }
 }
