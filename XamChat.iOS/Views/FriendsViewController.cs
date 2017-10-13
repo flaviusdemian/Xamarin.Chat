@@ -5,6 +5,7 @@ using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using UIKit;
 using XamChat.Core.ViewModels;
+using XamChat.iOS.UI;
 
 namespace XamChat.iOS.Views
 {
@@ -30,7 +31,9 @@ namespace XamChat.iOS.Views
         {
             base.ViewDidLoad();
 
-            var source = new MvxStandardTableViewSource(TableView, "TitleText FullName;ImageUrl Picture");
+            //todo:change here
+            //var source = new MvxStandardTableViewSource(TableView, "TitleText FullName;ImageUrl Picture");
+            var source = new CustomTableViewSource(TableView);
 
             TableView.Source = source;
 
@@ -81,5 +84,34 @@ namespace XamChat.iOS.Views
 
         #endregion
 
+    }
+
+    public class CustomTableViewSource : MvxTableViewSource
+    {
+        public CustomTableViewSource(UITableView tableView) : base(tableView)
+        {
+            tableView.RegisterNibForCellReuse(UINib.FromName(FriendsTableCell2.Key, NSBundle.MainBundle), FriendsTableCell2.Key);
+        }
+
+        protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)
+        {
+            try
+            {
+                var castedCell = (FriendsTableCell2)tableView.DequeueReusableCell(FriendsTableCell2.Key, indexPath);
+
+                return castedCell;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+
+            return null;
+        }
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return FriendsTableCell2.GetCellHeight();
+        }
     }
 }

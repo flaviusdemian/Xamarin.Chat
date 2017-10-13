@@ -10,18 +10,20 @@ namespace XamChat.iOS.UI
 {
     public partial class FriendsTableCell2 : MvxTableViewCell
     {
-        private const string BindingText = "Name Name;ImageUrl ImageUrl";
+        public static readonly NSString Key = new NSString("FriendsTableCell2");
 
         private MvxImageViewLoader _imageHelper;
 
-        public FriendsTableCell2(): base(BindingText)
+        public FriendsTableCell2(): base()
         {
             InitialiseImageHelper();
+            InitializeBindings();
         }
 
-        public FriendsTableCell2(IntPtr handle): base(BindingText, handle)
+        public FriendsTableCell2(IntPtr handle): base(handle)
         {
             InitialiseImageHelper();
+            InitializeBindings();
         }
         private void InitializeBindings()
         {
@@ -55,7 +57,7 @@ namespace XamChat.iOS.UI
 
         public static float GetCellHeight()
         {
-            return 120f;
+            return 60f;
         }
 
         private void InitialiseImageHelper()
