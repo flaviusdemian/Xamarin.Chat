@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#ff4dc1ce</color>
-  <color name="colorPrimaryDark">#ff39cb7d</color>
-  <color name="colorAccent">#ff4dc1cd</color>
-  <color name="statusBarColor">#ff4dc1ce</color>
+  <color name="colorPrimary">#06131a</color>
+  <color name="colorPrimaryDark">#06131a</color>
+  <color name="colorAccent">#00d9ff</color>
+  <color name="statusBarColor">#06131a</color>
   <color name="windowBackground">#ffffff</color>
-
-
 
   <color name="error">#ed4060</color>
   <color name="green">#ff01ed81</color>
@@ -22,4 +20,8 @@
   <item type="color" name="material_dark">#ff303030</item>
   <item type="color" name="dark">#ff000000</item>
   <item type="color" name="gray">#ff5f697a</item>
+
+  <color name="deventure_black">#06131a</color>
+  <color name="deventure_blue">#00d9ff</color>
+
 </resources>
