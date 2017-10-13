@@ -5,15 +5,9 @@ using XamChat.Core.ViewModels;
 
 namespace XamChat.Android.UI
 {
-    [Activity(
-        Label = "Login Activity"
-        , ScreenOrientation = ScreenOrientation.Portrait)
-    ]
+    [Activity(Label = "Login Activity", ScreenOrientation = ScreenOrientation.Portrait)]
     public class LoginActivity : BaseActivity
     {
-        private Button _buttonLogin;
-        private EditText _editTextEmail, _editTextPassword;
-
         public new LoginViewModel ViewModel
         {
             get { return (LoginViewModel) base.ViewModel; }
@@ -23,6 +17,9 @@ namespace XamChat.Android.UI
         protected override void OnViewModelSet()
         {
             SetContentView(Resource.Layout.activity_login);
+
+            ViewModel.Email = "slown1";
+            ViewModel.Password = "slowarad1@";
         }
     }
 }

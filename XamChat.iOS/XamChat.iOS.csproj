@@ -21,11 +21,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Flaviu Demian (YAEJE3596Y)</CodesignKey>
-    <CodesignProvision>b59c53c9-ef63-482b-a921-7883e5062f2b</CodesignProvision>
+    <CodesignProvision>iOS Team Provisioning Profile: *</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -34,8 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
+    <MtouchFastDev>true</MtouchFastDev>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,8 +49,9 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Flavius Demian (YAEJE3596Y)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>GoWorky EE Dev Prov</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -90,10 +92,8 @@
   <ItemGroup>
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
-    <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="NoPreLoadPluginBootstrapAction.cs" />
     <Compile Include="Services\CallService.cs" />
     <Compile Include="Services\NativeValidationService.cs" />
     <Compile Include="Setup.cs" />
@@ -125,80 +125,109 @@
       <SubType>Designer</SubType>
     </InterfaceDefinition>
     <None Include="packages.config" />
+    <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
+    <Compile Include="NoPreLoadPluginBootstrapAction.cs" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <Compile Include="Services\UIService.cs" />
+    <InterfaceDefinition Include="UI\FriendsTableCell2.xib" />
+    <Compile Include="UI\FriendsTableCell2.cs" />
+    <Compile Include="UI\FriendsTableCell2.designer.cs">
+      <DependentUpon>FriendsTableCell2.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Binding.4.2.2\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Binding.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Binding.4.2.2\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Core.4.2.2\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Core.4.2.2\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Binding.4.2.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Platform.4.2.2\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Platform.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Platform.4.2.2\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.DownloadCache, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.File, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.File.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.File.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.File.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.PhoneCall, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.PhoneCall.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Collections.Immutable, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.2.1\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.5.2.1\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.2.1\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.5.2.1\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.2.1\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.5.2.1\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.2.1\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.2.1\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.2.1\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.5.2.1\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.5.2.1\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.2.1\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.2.1\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamChat\XamChat.Core.csproj">
-      <Project>{bb1126d9-2124-42e4-bef9-88280cf2f37c}</Project>
+    <ProjectReference Include="..\XamChat.Core\XamChat.Core.csproj">
+      <Project>{B2E48A33-5BE7-4A4F-8381-A4F992B843A3}</Project>
       <Name>XamChat.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash_logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="icon.xcassets\Contents.json" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Settings_iOS5-10_29pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Settings_iOS5-10_29pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_App_iOS7-10_76pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_App_iOS7-10_76pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Notifications_iOS7-10_20pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Notifications_iOS7-10_20pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Pro_App_iOS9-10_83.5pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Spotlight_iOS7-10_40pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Spotlight_iOS7-10_40pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_App_iOS7-10_60pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_App_iOS7-10_60pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Notifications_iOS7-10_20pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Notifications_iOS7-10_20pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Settings_iOS5-10_29pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Settings_iOS5-10_29pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Spotlight_iOS7-10_40pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Spotlight_iOS7-10_40pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_128pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_128pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_16pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_16pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_256pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_256pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_32pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_32pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_512pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_512pt%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

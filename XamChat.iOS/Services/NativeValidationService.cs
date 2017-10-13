@@ -11,8 +11,13 @@ namespace XamChat.iOS.Services
             {
                 message = "Invalid input.";
             }
-            var uiAlertView = new UIAlertView("Error", message, null, "OK");
-            uiAlertView.Show();
+
+			var uiAlertView = new UIAlertView("Error", message, null, "OK");
+			uiAlertView.Show();
+
+   //         var alertView = UIAlertController.Create("Error",message, UIAlertControllerStyle.Alert);
+   //         alertView.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, (null)));
+			//PresentViewController(alertView, true, null);
         }
     }
 }

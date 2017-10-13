@@ -11,4 +11,11 @@
         android:background="@drawable/ic_back"
         android:backgroundTint="#ffffff"
         local:MvxBind="Click GoBackCommand" />
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="-64dp"
+        android:textColor="@android:color/white" />
 </Toolbar>

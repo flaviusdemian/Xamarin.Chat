@@ -6,9 +6,9 @@ namespace XamChat.Android.UI
 {
     public class BaseActivity : MvxActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
             CustomApplication.Instance.CurrentActivity = this;
         }
 

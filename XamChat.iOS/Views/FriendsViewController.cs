@@ -5,13 +5,18 @@ using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using UIKit;
 using XamChat.Core.ViewModels;
+using XamChat.iOS.UI;
 
 namespace XamChat.iOS.Views
 {
     [MvxFromStoryboard(StoryboardName = "MainStoryboard_iPhone")]
     public partial class FriendsViewController : MvxTableViewController
     {
-        private UISearchBar _searchBar;
+        #region private fields
+
+        private UISearchBar mSearchBar;
+
+        #endregion
 
         public FriendsViewController()
         {
@@ -22,44 +27,44 @@ namespace XamChat.iOS.Views
         {
         }
 
-        private static bool UserInterfaceIdiomIsPhone
-        {
-            get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-        }
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            var source = new MvxStandardTableViewSource(TableView, "TitleText FullName;ImageUrl Picture");
+            //todo:change here
+            //var source = new MvxStandardTableViewSource(TableView, "TitleText FullName;ImageUrl Picture");
+            var source = new CustomTableViewSource(TableView);
+
             TableView.Source = source;
 
-            _searchBar = new UISearchBar();
-            _searchBar.Placeholder = "Enter Search Text";
-            _searchBar.SetShowsCancelButton(true, true);
-            _searchBar.SizeToFit();
-            _searchBar.AutocorrectionType = UITextAutocorrectionType.No;
-            _searchBar.AutocapitalizationType = UITextAutocapitalizationType.None;
-            _searchBar.CancelButtonClicked += SearchBarCancelButtonClicked;
-            _searchBar.SearchButtonClicked += (sender, e) => { PerformSearch(); };
+            mSearchBar = new UISearchBar();
+            mSearchBar.Placeholder = "Enter Search Text";
+            mSearchBar.SetShowsCancelButton(true, true);
+            mSearchBar.SizeToFit();
+            mSearchBar.AutocorrectionType = UITextAutocorrectionType.No;
+            mSearchBar.AutocapitalizationType = UITextAutocapitalizationType.None;
+            mSearchBar.CancelButtonClicked += SearchBarCancelButtonClicked;
+            mSearchBar.SearchButtonClicked += (sender, e) => { PerformSearch(); };
 
-            MvxFluentBindingDescriptionSet<FriendsViewController, FriendsViewModel> set =
-                this.CreateBindingSet<FriendsViewController, FriendsViewModel>();
-            set.Bind(source).To(x => x.Friends);
-            set.Bind(source).For(s => s.SelectionChangedCommand).To(vm => vm.ViewDetailsCommand);
+            var bindingSet = this.CreateBindingSet<FriendsViewController, FriendsViewModel>();
+            bindingSet.Bind(source).To(x => x.Friends);
+            bindingSet.Bind(source).For(s => s.SelectionChangedCommand).To(vm => vm.ViewDetailsCommand);
 
-            set.Bind(_searchBar).For(x => x.Text).To(vm => vm.SearchTerm);
-            set.Apply();
+            bindingSet.Bind(mSearchBar).For(x => x.Text).To(vm => vm.SearchTerm);
+            bindingSet.Apply();
 
             TableView.ReloadData();
 
-            TableView.TableHeaderView = _searchBar;
+            TableView.TableHeaderView = mSearchBar;
+
+            if (NavigationItem == null)
+            {
+                return;
+            }
+            NavigationItem.Title = "Friends";
         }
 
-        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-        {
-            return 100;
-        }
+        #region private methods
 
         private void SearchBarCancelButtonClicked(object sender, EventArgs e)
         {
@@ -68,44 +73,45 @@ namespace XamChat.iOS.Views
                 var friendsViewModel = base.ViewModel as FriendsViewModel;
                 friendsViewModel.SearchTerm = String.Empty;
                 friendsViewModel.FilterCommand.Execute(null);
-                BeginInvokeOnMainThread(() => _searchBar.ResignFirstResponder());
+                BeginInvokeOnMainThread(() => mSearchBar.ResignFirstResponder());
             }
         }
 
         private void PerformSearch()
         {
-            if (base.ViewModel is FriendsViewModel)
-            {
-                var friendsViewModel = base.ViewModel as FriendsViewModel;
-                friendsViewModel.FilterCommand.Execute(null);
-            }
+            ((FriendsViewModel)ViewModel).FilterCommand.Execute(null);
         }
 
-        public class CustomTableViewSource : MvxTableViewSource
+        #endregion
+
+    }
+
+    public class CustomTableViewSource : MvxTableViewSource
+    {
+        public CustomTableViewSource(UITableView tableView) : base(tableView)
         {
-            private static readonly NSString FriendCellIdentifier = new NSString("FriendCell");
+            tableView.RegisterNibForCellReuse(UINib.FromName(FriendsTableCell2.Key, NSBundle.MainBundle), FriendsTableCell2.Key);
+        }
 
-
-            public CustomTableViewSource(UITableView tableView)
-                : base(tableView)
+        protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)
+        {
+            try
             {
+                var castedCell = (FriendsTableCell2)tableView.DequeueReusableCell(FriendsTableCell2.Key, indexPath);
+
+                return castedCell;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
 
-            protected CustomTableViewSource(IntPtr handle)
-                : base(handle)
-            {
-            }
+            return null;
+        }
 
-            public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-            {
-                return 150;
-            }
-
-            protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath,
-                object item)
-            {
-                return tableView.DequeueReusableCell(FriendCellIdentifier);
-            }
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return FriendsTableCell2.GetCellHeight();
         }
     }
 }

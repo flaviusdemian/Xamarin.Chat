@@ -6,9 +6,14 @@ namespace XamChat.Android.Utilities
 {
     public class DebugLog
     {
+
+        #region private fields
+
         private static DebugLog instance;
 
         private bool isEnabled = true;
+
+        #endregion
 
         private DebugLog()
         {
@@ -48,7 +53,7 @@ namespace XamChat.Android.Utilities
             if (isEnabled)
             {
                 Log.Debug(AndroidConstants.TAG, AndroidConstants.LINE_STRING);
-                Log.Debug(AndroidConstants.TAG, string.Format("Exception is: %s", message));
+                Log.Debug(AndroidConstants.TAG, string.Format("Exception is: {0}", message));
                 Log.Debug(AndroidConstants.TAG, AndroidConstants.LINE_STRING);
             }
         }
@@ -58,7 +63,7 @@ namespace XamChat.Android.Utilities
             if (isEnabled)
             {
                 Log.Debug(AndroidConstants.TAG, AndroidConstants.LINE_STRING);
-                Log.Debug(AndroidConstants.TAG, string.Format("Exception is: %s", message));
+                Log.Debug(AndroidConstants.TAG, string.Format("Exception is: {0}", message));
                 Log.Debug(AndroidConstants.TAG, AndroidConstants.LINE_STRING);
                 ToastHelper.ShowMessage(message, ToastLength.Long);
             }

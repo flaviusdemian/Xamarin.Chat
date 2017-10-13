@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="cxk-wN-pdQ" customClass="FriendsTableCell2">
+            <rect key="frame" x="0.0" y="0.0" width="535" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="535" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4tU-Hi-wth">
+                        <rect key="frame" x="32" y="24" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5VB-86-uyn"/>
+                            <constraint firstAttribute="width" constant="40" id="KwO-At-MSF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wo-q7-8Qg">
+                        <rect key="frame" x="88" y="33.5" width="415" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="2wo-q7-8Qg" secondAttribute="trailing" constant="16" id="1qi-9W-FRZ"/>
+                    <constraint firstItem="2wo-q7-8Qg" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="2tK-ib-Eb9"/>
+                    <constraint firstItem="4tU-Hi-wth" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="Ccl-cE-ll9"/>
+                    <constraint firstItem="4tU-Hi-wth" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" constant="16" id="bqW-TM-2Md"/>
+                    <constraint firstItem="2wo-q7-8Qg" firstAttribute="leading" secondItem="4tU-Hi-wth" secondAttribute="trailing" constant="16" id="l5d-GB-IEc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="141.5" y="76"/>
+            <connections>
+                <outlet property="iv_Friend" destination="4tU-Hi-wth" id="name-outlet-4tU-Hi-wth"/>
+                <outlet property="lbl_fullName" destination="2wo-q7-8Qg" id="name-outlet-2wo-q7-8Qg"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="splash_logo2.png" width="2480" height="826"/>
+    </resources>
+</document>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/blue">
+    android:background="@color/deventure_blue">
     <include
         android:id="@+id/friend_toolbar_container"
         layout="@layout/toolbar_with_back_button"
@@ -13,9 +13,8 @@
         android:layout_height="wrap_content" />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="80dp"
-        android:layout_below="@id/friend_toolbar_container">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/friend_toolbar_container">
         <TextView
             android:id="@+id/tv_full_name"
             android:layout_width="wrap_content"
@@ -25,43 +24,39 @@
             android:layout_marginBottom="8dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
+            android:textSize="24sp"
             android:textColor="@android:color/white"
             local:MvxBind="Text Friend.FullName" />
+        <TextView
+            android:id="@+id/tv_full_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="0722222222"
+            android:textColor="@android:color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_full_name"
+            local:MvxBind="Text Friend.PhoneNumber" />
         <Mvx.MvxImageView
             android:id="@+id/iv_full_profile_picture"
-            android:layout_below="@+id/tv_full_name"
+            android:layout_below="@+id/tv_full_phone_number"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:src="@drawable/img_profile"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
             local:MvxBind="ImageUrl Friend.Picture" />
-        <TextView
-            android:id="@+id/tv_full_phone_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0722222222"
-            android:textColor="@android:color/white"
-            android:layout_alignParentEnd="true"
-            local:MvxBind="Text Friend.PhoneNumber" />
         <Button
             android:id="@+id/btn_call"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Call"
             android:textColor="@android:color/white"
-            android:backgroundTint="#2ecc71"
-            android:layout_alignBottom="@+id/iv_full_profile_picture"
+            android:backgroundTint="@color/deventure_black"
+            android:layout_below="@+id/iv_full_profile_picture"
             android:layout_alignParentEnd="true"
             local:MvxBind="Click CallCommand" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"
-            android:layout_below="@+id/iv_full_profile_picture"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum risus ac maximus efficitur. Ut tincidunt odio nisi, non sagittis." />
     </RelativeLayout>
 </RelativeLayout>
