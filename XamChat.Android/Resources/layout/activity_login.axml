@@ -69,6 +69,7 @@
                 android:background="@color/deventure_blue"
                 android:textColor="@android:color/white"
                 android:textAllCaps="false"
+                android:textSize="20sp"
                 local:MvxBind="Click LoginCommand" />
         </RelativeLayout>
     </ScrollView>

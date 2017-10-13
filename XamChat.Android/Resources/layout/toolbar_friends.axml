@@ -4,23 +4,30 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/deventure_blue"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="wrap_content">
         <EditText
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/iv_search"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             local:MvxBind="Text SearchTerm" />
-        <Button
+        <ImageButton
             android:id="@+id/iv_search"
+            style="?android:attr/buttonBarStyle"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/ic_search"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_search"
             android:layout_alignParentEnd="true"
+            android:tint="@android:color/white"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            android:layout_marginEnd="@dimen/margin_horizontal"
             local:MvxBind="Click FilterCommand" />
     </RelativeLayout>
 </Toolbar>

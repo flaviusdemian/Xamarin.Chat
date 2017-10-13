@@ -4,17 +4,16 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@android:color/white">
     <include
         android:id="@+id/friends_toolbar_container"
         layout="@layout/toolbar_friends"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tb_container"
-        android:layout_marginTop="80dp">
+        android:layout_below="@+id/friends_toolbar_container">
         <Mvx.MvxListView
             android:id="@+id/lv_friends"
             android:layout_width="match_parent"
