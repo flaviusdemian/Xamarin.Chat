@@ -54,17 +54,12 @@ namespace XamChat.iOS.Views
 
             TableView.TableHeaderView = mSearchBar;
 
-            if(NavigationItem == null)
+            if (NavigationItem == null)
             {
                 return;
             }
             NavigationItem.Title = "Friends";
         }
-
-        //public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-        //{
-        //    return 100f;
-        //}
 
         #region private methods
 
@@ -87,31 +82,4 @@ namespace XamChat.iOS.Views
         #endregion
 
     }
-
-	public class CustomTableViewSource : MvxTableViewSource
-	{
-		private static readonly NSString FriendCellIdentifier = new NSString("FriendCell");
-
-
-		public CustomTableViewSource(UITableView tableView)
-			: base(tableView)
-		{
-		}
-
-		protected CustomTableViewSource(IntPtr handle)
-			: base(handle)
-		{
-		}
-
-		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-		{
-            return 150f;
-		}
-
-		protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath,
-			object item)
-		{
-			return tableView.DequeueReusableCell(FriendCellIdentifier);
-		}
-	}
 }
