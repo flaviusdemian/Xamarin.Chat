@@ -31,6 +31,7 @@ namespace XamChat.iOS.Views
             base.ViewDidLoad();
 
             var source = new MvxStandardTableViewSource(TableView, "TitleText FullName;ImageUrl Picture");
+
             TableView.Source = source;
 
             mSearchBar = new UISearchBar();
@@ -52,6 +53,12 @@ namespace XamChat.iOS.Views
             TableView.ReloadData();
 
             TableView.TableHeaderView = mSearchBar;
+
+            if(NavigationItem == null)
+            {
+                return;
+            }
+            NavigationItem.Title = "Friends";
         }
 
         //public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)

@@ -9,7 +9,7 @@ namespace XamChat.iOS.Views
 {
     //[Register("LoginViewController")]
     [MvxFromStoryboard(StoryboardName = "MainStoryboard_iPhone")]
-    public partial class LoginViewController : MvxViewController
+    public partial class LoginViewController : MvxViewController<LoginViewModel>
     {
         public LoginViewController()
         {
@@ -49,6 +49,9 @@ namespace XamChat.iOS.Views
             });
 
             View.AddGestureRecognizer(gestureRecognizer);
+
+            ViewModel.Email = "slown1";
+            ViewModel.Password = "slowarad1@";
         }
     }
 }
