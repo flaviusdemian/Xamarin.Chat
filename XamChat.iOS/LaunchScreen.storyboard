@@ -44,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash_logo.png" width="1024" height="1024"/>
+        <image name="splash_logo.png" width="2480" height="826"/>
     </resources>
 </document>
