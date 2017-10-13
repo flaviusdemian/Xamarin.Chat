@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kl8-V5-uDo" image="splash_logo.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kl8-V5-uDo" image="splash_logo2.png">
                                 <rect key="frame" x="40" y="236" width="520" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="ikV-HI-ddq"/>
@@ -44,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash_logo.png" width="2480" height="826"/>
+        <image name="splash_logo2.png" width="2480" height="826"/>
     </resources>
 </document>
