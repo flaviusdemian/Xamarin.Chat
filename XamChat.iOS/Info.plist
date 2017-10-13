@@ -30,10 +30,6 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>10.3</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>Default-568h@2x.png</string>
-	</array>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStoryboard_iPad</string>
 	<key>UILaunchStoryboardName</key>
@@ -42,5 +38,7 @@
 	<string>XamChat</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
+	<key>XSAppIconAssets</key>
+	<string>icon.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>

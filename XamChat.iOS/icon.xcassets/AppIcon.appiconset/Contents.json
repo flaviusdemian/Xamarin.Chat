@@ -1,0 +1,233 @@
+{
+  "images": [
+    {
+      "size": "20x20",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "size": "20x20",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "iPhone_Settings_iOS5-10_29pt@2x.png",
+      "size": "29x29",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "iPhone_Settings_iOS5-10_29pt@3x.png",
+      "size": "29x29",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "iPad_Spotlight_iOS7-10_40pt@2x.png",
+      "size": "40x40",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "iPhone_App_iOS7-10_60pt@2x.png",
+      "size": "40x40",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "iPhone_App_iOS7-10_60pt@2x.png",
+      "size": "60x60",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "iPhone_App_iOS7-10_60pt@3x.png",
+      "size": "60x60",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "size": "20x20",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "size": "20x20",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPad_Settings_iOS5-10_29pt.png",
+      "size": "29x29",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPad_Settings_iOS5-10_29pt@2x.png",
+      "size": "29x29",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPad_Spotlight_iOS7-10_40pt.png",
+      "size": "40x40",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPhone_Spotlight_iOS7-10_40pt@2x.png",
+      "size": "40x40",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPad_Pro_App_iOS9-10_83.5pt@2x.png",
+      "size": "83.5x83.5",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPad_App_iOS7-10_76pt.png",
+      "size": "76x76",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "iPad_App_iOS7-10_76pt@2x.png",
+      "size": "76x76",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "Mac_512pt@2x.png",
+      "size": "1024x1024",
+      "scale": "1x",
+      "idiom": "ios-marketing"
+    },
+    {
+      "role": "notificationCenter",
+      "filename": "AppleWatch_NotificationCenter_38mm_24pt@2x.png",
+      "size": "24x24",
+      "subtype": "38mm",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "role": "notificationCenter",
+      "filename": "AppleWatch_NotificationCenter_42mm_27.5pt@2x.png",
+      "size": "27.5x27.5",
+      "subtype": "42mm",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "role": "companionSettings",
+      "filename": "AppleWatch_CompanionSettings_29pt@2x.png",
+      "size": "29x29",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "role": "companionSettings",
+      "filename": "AppleWatch_CompanionSettings_29pt@3x.png",
+      "size": "29x29",
+      "scale": "3x",
+      "idiom": "watch"
+    },
+    {
+      "role": "appLauncher",
+      "filename": "AppleWatch_HomeScreen_40pt@2x.png",
+      "size": "40x40",
+      "subtype": "38mm",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "role": "longLook",
+      "size": "44x44",
+      "subtype": "42mm",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "role": "quickLook",
+      "filename": "AppleWatch_ShortLook_38mm_86pt@2x.png",
+      "size": "86x86",
+      "subtype": "38mm",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "role": "quickLook",
+      "filename": "AppleWatch_ShortLook_42mm_98pt@2x.png",
+      "size": "98x98",
+      "subtype": "42mm",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "filename": "Mac_16pt.png",
+      "size": "16x16",
+      "scale": "1x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_16pt@2x.png",
+      "size": "16x16",
+      "scale": "2x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_32pt.png",
+      "size": "32x32",
+      "scale": "1x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_32pt@2x.png",
+      "size": "32x32",
+      "scale": "2x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_128pt.png",
+      "size": "128x128",
+      "scale": "1x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_128pt@2x.png",
+      "size": "128x128",
+      "scale": "2x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_256pt.png",
+      "size": "256x256",
+      "scale": "1x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_256pt@2x.png",
+      "size": "256x256",
+      "scale": "2x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_512pt.png",
+      "size": "512x512",
+      "scale": "1x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "Mac_512pt@2x.png",
+      "size": "512x512",
+      "scale": "2x",
+      "idiom": "mac"
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

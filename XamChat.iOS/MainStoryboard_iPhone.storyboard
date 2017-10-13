@@ -135,28 +135,28 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Full Name" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="366">
-                                <rect key="frame" x="20" y="36" width="335" height="21"/>
+                                <rect key="frame" x="20" y="36" width="335" height="26.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="437">
-                                <rect key="frame" x="306" y="73" width="49" height="21"/>
+                                <rect key="frame" x="306" y="78.5" width="49" height="21"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="353">
-                                <rect key="frame" x="123.5" y="105" width="128" height="128"/>
+                                <rect key="frame" x="123.5" y="110.5" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="415"/>
                                     <constraint firstAttribute="height" constant="128" id="416"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="352">
-                                <rect key="frame" x="36" y="253" width="303" height="48"/>
+                                <rect key="frame" x="36" y="258.5" width="303" height="48"/>
                                 <color key="backgroundColor" red="0.023542614653706551" green="0.074947603046894073" blue="0.098898924887180328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="LMU-5b-SgT"/>

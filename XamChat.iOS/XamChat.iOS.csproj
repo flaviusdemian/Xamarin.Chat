@@ -193,6 +193,37 @@
   <ItemGroup>
     <BundleResource Include="Resources\splash_logo2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="icon.xcassets\Contents.json" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Settings_iOS5-10_29pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Settings_iOS5-10_29pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_App_iOS7-10_76pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_App_iOS7-10_76pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Notifications_iOS7-10_20pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Notifications_iOS7-10_20pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Pro_App_iOS9-10_83.5pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Spotlight_iOS7-10_40pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPad_Spotlight_iOS7-10_40pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_App_iOS7-10_60pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_App_iOS7-10_60pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Notifications_iOS7-10_20pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Notifications_iOS7-10_20pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Settings_iOS5-10_29pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Settings_iOS5-10_29pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Spotlight_iOS7-10_40pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\iPhone_Spotlight_iOS7-10_40pt%403x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_128pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_128pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_16pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_16pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_256pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_256pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_32pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_32pt%402x.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_512pt.png" />
+    <ImageAsset Include="icon.xcassets\AppIcon.appiconset\Mac_512pt%402x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
